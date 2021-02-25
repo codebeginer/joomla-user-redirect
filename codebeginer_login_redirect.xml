@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="user" method="upgrade">
+	<name>PLG_USER_CODEBEGINER_LOGIN_REDIRECT</name>
+	<author>Manoj Thakur</author>
+	<creationDate>Feb 2021</creationDate>
+	<copyright>Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>manoj.thakur.programmer@gmail.com</authorEmail>
+	<authorUrl>manoj.thakur.programmer@gmail.com</authorUrl>
+	<version>3.1.0</version>
+	<description>This is the sample plugin to redirect specific user group to sepecific location after login</description>
+	<files>
+		<filename plugin="codebeginer_login_redirect">codebeginer_login_redirect.php</filename>
+		<filename>index.html</filename>
+		<filename>codebeginer_login_redirect.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_user_codebeginer_login_redirect.ini</language>
+		<language tag="en-GB">en-GB.plg_user_codebeginer_login_redirect.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="enable_redirect" type="list" default="2" label="PLG_USER_CODEBEGINER_LBL_REDIRECT" description="PLG_USER_CODEBEGINER_LBL_REDIRECT_DESC">
+		            <option value="1">PLG_USER_CODEBEGINER_LBL_REDIRECT_ENABLE</option>
+		            <option value="0">PLG_USER_CODEBEGINER_LBL_REDIRECT_DISABLE</option>
+		        </field>
+
+		        <field type="spacer" name="myspacer" label="" />
+		        <field name="user_profile_group" type="usergroup"
+				label="PLG_USER_CODEBEGINER_LBL_USER_GROUP_ONE"
+				description="PLG_USER_CODEBEGINER_LBL_USER_GROUP_ONE_DESC" 
+				/>
+				<field name="user_profile_menuitem" type="menuitem" label="PLG_USER_CODEBEGINER_LBL_REDIRECT_MENU_LBL" description="PLG_USER_CODEBEGINER_LBL_REDIRECT_MENU_DESC"/>
+				<field type="spacer" name="myspacer" hr="true" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
